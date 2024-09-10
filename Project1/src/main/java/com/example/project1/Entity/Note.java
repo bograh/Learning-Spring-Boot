@@ -16,17 +16,19 @@ import java.util.Date;
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long noteId;
 
     private String title;
     private String content;
     private Date dateAdded;
+    private Date dateModified;
 
-    public Note(Long id, String title, String content, Date dateAdded) {
-        this.id = id;
+    public Note(Long noteId, String title, String content, Date dateAdded, Date dateModified) {
+        this.noteId = noteId;
         this.title = title;
         this.content = content;
         this.dateAdded = dateAdded;
+        this.dateModified = dateModified;
     }
 
     public Note() {
